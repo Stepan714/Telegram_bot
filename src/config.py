@@ -1,4 +1,4 @@
-TOKEN = # bot token from @BorFather (YOUR TOKEN)
+TOKEN = '6055710295:AAEEDoaU0mSEDHyYaaqgOugmIL9LLKQCbNA' # bot token from @BorFather
 
 WELCOME_MESSAGE = "Добро пожаловать, {0.first_name}!\nЯ - <b>{1.first_name}</b>," \
                   "бот созданный чтобы искать картинки, статьи.\nВыбери категорию, напиши слово, а я найду :)"
@@ -22,7 +22,7 @@ SEARCH_YANDEX_URL = 'https://yandex.ru/images/search'
 PARAMS = {'rpt': 'imageview', 'format': 'json',
           'request': '{"blocks":[{"block":"b-page_type_search-by-image__link"}]}'
           }
-MY_URL = # YOUR REFERENCE TO tg "'telegram.me/...."
+MY_URL = 'telegram.me/stephan106'
 
 HELP_INF = "Я - умный tg-bot, способный искать изображения и статьи.\n"\
                                       "Для поиска нужно выбрать категорию, а затем просто ввести слово "\
