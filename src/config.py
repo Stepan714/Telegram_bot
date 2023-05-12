@@ -35,3 +35,6 @@ WHAT_SEARCH_TXT = 'Что вы хотите найти?'
 CHOOSE_CATEGORY = 'Пожалуйста, выбери категорию'
 REFERENCE_SOURCE = 'Ссылка на источник:'
 WIKIP_FAILURE = 'К сожалению, такой информации не найдено :('
+COUNT_LINKS = 100
+BUT_STOP = 'STOP'
+NOT_FOUND = 'not found'

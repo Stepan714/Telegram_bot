@@ -26,11 +26,11 @@ def welcome(message):
     bot.send_sticker(message.chat.id, sti)
 
     markup = telebot.types.ReplyKeyboardMarkup(resize_keyboard=True)
-    item1 = telebot.types.KeyboardButton(config.SEARCH_IMAGE)
-    item2 = telebot.types.KeyboardButton("STOP")
-    item3 = telebot.types.KeyboardButton(config.SEARCH_INF)
+    button_1 = telebot.types.KeyboardButton(config.SEARCH_IMAGE)
+    button_2 = telebot.types.KeyboardButton(config.BUT_STOP)
+    button_3 = telebot.types.KeyboardButton(config.SEARCH_INF)
 
-    markup.add(item1, item2, item3)
+    markup.add(button_1, button_2, button_3)
     bot.send_message(message.chat.id, config.WELCOME_MESSAGE.format(message.from_user, bot.get_me()), parse_mode='html', reply_markup=markup)
 
 @bot.message_handler(commands=['find_inf'])
@@ -48,14 +48,14 @@ def start_message(message):
     if message.text == config.SEARCH_IMAGE:
         config.WHAT_SEARCH = 1
         bot.send_message(message.chat.id, config.WHAT_SEARCH_TXT)
-    elif message.text == 'STOP':
+    elif message.text == config.BUT_STOP:
         config.WHAT_SEARCH = 0
     elif message.text == config.SEARCH_INF:
         bot.send_message(message.chat.id, config.WHAT_SEARCH_TXT)
         config.WHAT_SEARCH = 2
     elif config.WHAT_SEARCH == 1:
         url_photo = pc.find_image(message)
-        if url_photo != 'not found':
+        if url_photo != config.NOT_FOUND:
             bot.send_photo(message.chat.id, requests.get(url_photo).content)
         else:
             bot.send_message(message.chat.id, config.FAILURE, parse_mode='html')
@@ -90,3 +90,4 @@ def stop(message):
 
 if __name__ == '__main__':
     bot.polling(none_stop=True)
+
