@@ -1,4 +1,4 @@
-TOKEN = '6055710295:AAEEDoaU0mSEDHyYaaqgOugmIL9LLKQCbNA' # bot token from @BorFather
+TOKEN = # bot token from @BorFather
 
 WELCOME_MESSAGE = "Добро пожаловать, {0.first_name}!\nЯ - <b>{1.first_name}</b>," \
                   "бот созданный чтобы искать картинки, статьи.\nВыбери категорию, напиши слово, а я найду :)"
